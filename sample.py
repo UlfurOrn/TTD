@@ -4,5 +4,7 @@ def add(numbers):
     if numbers == "":
         return 0
 
-    else:
-        return sum([int(num) for num in numbers.replace("\n", ",").split(",")])
+    numbers = numbers.replace("\n", ",")
+    number_list = numbers.split(",")
+
+    return sum([int(num) for num in number_list])
