@@ -18,3 +18,8 @@ def test_two_num():
 def test_multiple_num():
     assert add("1,2,3,4,5") == 15
     assert add("1,1,1,1,1") == 5
+
+
+def test_newline_delimeter():
+    assert add("1\n2,3,4,5") == 15
+    assert add("4\n3\n2,1") == 10

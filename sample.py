@@ -5,4 +5,4 @@ def add(numbers):
         return 0
 
     else:
-        return sum([int(num) for num in numbers.split(",")])
+        return sum([int(num) for num in numbers.replace("\n", ",").split(",")])
