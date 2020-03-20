@@ -13,3 +13,8 @@ def test_single_num():
 def test_two_num():
     assert add("4,5") == 9
     assert add("14,3") == 17
+
+
+def test_multiple_num():
+    assert add("1,2,3,4,5") == 15
+    assert add("1,1,1,1,1") == 5
