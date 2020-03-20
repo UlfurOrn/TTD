@@ -3,9 +3,15 @@
 def add(numbers):
     if numbers == "":
         return 0
+    
+    delimeter = ","
 
-    numbers = numbers.replace("\n", ",")
-    number_list = numbers.split(",")
+    if numbers[:2] == "//":
+        delimeter = numbers[2]
+        numbers = numbers[4:]
+
+    numbers = numbers.replace("\n", delimeter)
+    number_list = numbers.split(delimeter)
 
     num_list = []
     neg_list = []
