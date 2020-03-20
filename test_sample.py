@@ -1,3 +1,4 @@
+import pytest
 from sample import add
 
 
@@ -28,3 +29,11 @@ def test_newline_delimeter():
 def test_ignore_big_num():
     assert add("1001,2,3") == 5
     assert add("1000,2,3") == 1005
+
+
+def test_negatives():
+    with pytest.raises(Exception, match=r"Negatives not allowed: -1"):
+        add("-1,2")
+
+    with pytest.raises(Exception, match=r"Negatives not allowed: -4,-5"):
+        add("2,-4,3,-5")
