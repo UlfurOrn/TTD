@@ -23,3 +23,8 @@ def test_multiple_num():
 def test_newline_delimeter():
     assert add("1\n2,3,4,5") == 15
     assert add("4\n3\n2,1") == 10
+
+
+def test_ignore_big_num():
+    assert add("1001,2,3") == 5
+    assert add("1000,2,3") == 1005
